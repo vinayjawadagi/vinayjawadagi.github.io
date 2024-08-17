@@ -1,90 +1,188 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to My GitHub Page</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-      }
-      header {
-        background-color: #333;
-        color: white;
-        padding: 1em 0;
-      }
-      h1 {
-        margin: 0;
-      }
-      main {
-        padding: 2em;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to My GitHub Page</h1>
-    </header>
-    <main>
-      <p>This is a simple GitHub Pages site.</p>
-      <p>Feel free to explore and modify it as you wish!</p>
-    </main>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio Website</title>
   </head>
   <body>
     <header>
-      <h1>Your Name</h1>
+      <div class="logo-container">
+        <a href="#" class="logo">Vinay Jawadagi</a>
+      </div>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#about-section">About</a>
+        <a href="#work-section">Work Experience</a>
+        <a href="#project-section">Projects</a>
+        <a href="#contact-section">Contact</a>
       </nav>
     </header>
+    <section class="home">
+      <div class="flex">
+        <div class="home-img w-1/2">
+          <img src="photo.jpg" alt="" class="object-cover h-full w-full" />
+        </div>
+        <div class="home-content w-1/2 overflow-y-auto">
+        <h1 id="about-section">Hi, It's <span>Vinay</span></h1>
+        <p>
+          I'm a <span>Software Engineer</span> with two years of industry experience and
+          I'm currently pursuing my Masters degree in Computer science at
+          Northeastern University, Boston.
+        </p>
 
-    <section id="home">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Introduction and summary about yourself.</p>
-    </section>
+        <h1 id="work-section"><span>Work Experience</span></h1>
+        <p>
+          <div class="project-tile">
+            <a id="project-heading">Graduate Teaching Assistant</a>
+            <br>
+            <a id="project-heading">Khoury College of Computer Sciences</a>
+            <p id="project-content">
+              Worked as a teaching assistant for the course CS 5004 Object Oriented Design, conducting weekly lab ses- sions, providing individualized support and 
+              offering constructive feedback to students to enhance their academic performance.
+            </p>
+          </div>
+          <div class="project-tile">
+            <a id="project-heading">Analyst (Software Developer)</a>
+            <br>
+            <a id="project-heading">Deloitte India</a>
+            <p id="project-content">
+              Worked as a software developer, mainly working on the backend for two years developing robust solutions for clients. 
+            </p>
+          </div>
+        </p>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Details about your background, skills, and experience.</p>
-    </section>
+        <h1 id="project-section"><span>Projects</span></h1>
+        <p>
+            <div class="project-grid">
+                <div class="project-tile">
+                  <a id="project-heading" href="https://github.com/vinayjawadagi/StockMarketPredictor" target="_blank">
+                    Stock Market Predictor</a>
+                  <p id="project-content"> 
+                    This project written in python reccomeends the user if they should buy, sell or hold the stock. 
+                    It uses LSTM and Markov Models tranined on the daily stock prices and displays the result using Tkinter GUI.  </p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading" href="https://github.com/vinayjawadagi/PhotoAlbumViewer" target="_blank">
+                        Photo Album Viewer</a>
+                    <p id="project-content"> The Photo Album Viewer takes in input commmands from a file and displays the snapshots using Swing view or HTML view.
+                      Contains various commands like draw, move, delete etc. It's implemented using the MVC architecture, adhereing to Object oriendted design and solid principles.</p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading">Distributed File System</a>
+                    <p id="project-content"> This is a Go-based implementation of a distributed file system, designed to manage and store data across multiple nodes efficiently.
 
-    <section id="portfolio">
-      <h2>My Work</h2>
-      <div class="portfolio-item">
-        <img src="images/project1.jpg" alt="Project 1" />
-        <p>Description of Project 1.</p>
+                    </p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading">Chat Application</a>
+                    <p id="project-content"> This chat application, built with Java Spring Boot, facilitates real-time one-on-one communication between users. 
+                    It provides a seamless and interactive messaging experience, allowing users to exchange messages in real time using WebSockets and the data is persisted in MongoDB.
+                    </p>
+            </div>
+        </p>
+
+        <h1 id="contact-section" class="w-full text-left"><span>Contact</span></h1>
+
+<p class="w-full text-left">
+  <div class="social-icons flex flex-col items-start">
+    <a href="https://www.linkedin.com/in/vinay-jawadagi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/vinayjawadagi" target="_blank"><i class="fa-brands fa-github"></i></a>
+  </div>
+  <a href="mailto:jawadagi.v@northeastern.edu" class="btn block">Email</a>
+</div>
       </div>
-      <!-- Add more portfolio items as needed -->
     </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Your Name</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
   </body>
+  <script>
+    window.onscroll = function () {
+      var logo = document.querySelector(".logo-container");
+      if (window.pageYOffset > 0) {
+        logo.style.display = "none";
+      } else {
+        logo.style.display = "block";
+      }
+    };
+
+    var navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        this.classList.add("active");
+      });
+    });
+  </script>
 </html>
+
+
+<!-- <h1 id="about-section">Hi, It's <span>Vinay</span></h1>
+        <p>
+          I'm a <span>Software Engineer</span> with two years of industry experience and
+          I'm currently pursuing my Masters degree in Computer science at
+          Northeastern University, Boston.
+        </p>
+
+        <h1 id="work-section"><span>Work Experience</span></h1>
+        <p>
+          <div class="project-tile">
+            <a id="project-heading">Graduate Teaching Assistant</a>
+            <br>
+            <a id="project-heading">Khoury College of Computer Sciences</a>
+            <p id="project-content">
+              Worked as a teaching assistant for the course CS 5004 Object Oriented Design, conducting weekly lab ses- sions, providing individualized support and 
+              offering constructive feedback to students to enhance their academic performance.
+            </p>
+          </div>
+          <div class="project-tile">
+            <a id="project-heading">Analyst (Software Developer)</a>
+            <br>
+            <a id="project-heading">Deloitte India</a>
+            <p id="project-content">
+              Worked as a software developer, mainly working on the backend for two years developing robust solutions for clients. 
+            </p>
+          </div>
+        </p>
+
+        <h1 id="project-section"><span>Projects</span></h1>
+        <p>
+            <div class="project-grid">
+                <div class="project-tile">
+                  <a id="project-heading" href="https://github.com/vinayjawadagi/StockMarketPredictor" target="_blank">
+                    Stock Market Predictor</a>
+                  <p id="project-content"> 
+                    This project written in python reccomeends the user if they should buy, sell or hold the stock. 
+                    It uses LSTM and Markov Models tranined on the daily stock prices and displays the result using Tkinter GUI.  </p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading" href="https://github.com/vinayjawadagi/PhotoAlbumViewer" target="_blank">
+                        Photo Album Viewer</a>
+                    <p id="project-content"> The Photo Album Viewer takes in input commmands from a file and displays the snapshots using Swing view or HTML view.
+                      Contains various commands like draw, move, delete etc. It's implemented using the MVC architecture, adhereing to Object oriendted design and solid principles.</p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading">Distributed File System</a>
+                    <p id="project-content"> This is a Go-based implementation of a distributed file system, designed to manage and store data across multiple nodes efficiently.
+
+                    </p>
+                </div>
+                <div class="project-tile">
+                    <a id="project-heading">Chat Application</a>
+                    <p id="project-content"> This chat application, built with Java Spring Boot, facilitates real-time one-on-one communication between users. 
+                    It provides a seamless and interactive messaging experience, allowing users to exchange messages in real time using WebSockets and the data is persisted in MongoDB.
+                    </p>
+            </div>
+        </p>
+
+        <h1 id="contact-section">Contact</h1>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/vinay-jawadagi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/vinayjawadagi" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="mailto:jawadagi.v@northeastern.edu" class="btn">Email</a> -->
