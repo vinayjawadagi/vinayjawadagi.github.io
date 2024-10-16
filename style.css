@@ -22,7 +22,7 @@ body{
     color: white;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,8 +34,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-        flex-direction: column;
-        align-items: center;
+    flex-direction: row;
 }
 
 .logo-container {
@@ -76,7 +75,9 @@ nav a.active{
 
 section{
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    /* padding: 5rem 9% 5rem; */
+    padding: 10rem 5%;
+    margin-bottom: 0.01rem;
 }
 
 .home{
@@ -107,8 +108,8 @@ span{
     font-size: 1.6rem;
 }
 
-.home-img{
-    border-radius: 0%;
+.home-img img:hover {
+    transform: scale(1.05);
 }
 
 .home-img img{
@@ -165,42 +166,38 @@ span{
     box-shadow: 0 0 25px #9456a2;
 }
 
+/* Projects Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  
-  .project-tile {
-    /* border: 1px solid #ccc; */
-    border: none;
-    padding: 1rem;
-    /* text-align: left; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-tile {
+    padding: 2rem;
+    background-color: #222;
+    border-radius: 10px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+    box-shadow: 0 0 25px rgba(148, 86, 162, 0.5);
 }
 
 #project-heading {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: white;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-    text-align: center; 
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 #project-content {
-    font-size: 15px;
+    font-size: 1.6rem;
+    color: #bbb;
     text-align: left;
-}
-
-/* #project-heading a{
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-} */
-
-#project-heading:hover,
-#project-heading.active{
-    color: #9456a2;
+    line-height: 1.8;
+        margin-bottom: 3rem;
 }
